@@ -7,12 +7,11 @@ public class Task {
             throw new IllegalArgumentException("The array must contain at least two elements!");
         }
 
-        int arraySize = array.length;
         int min = Integer.MAX_VALUE;
         int previousMin = min;
-
         int leftIndex = 0;
-        int rightIndex = arraySize - 1;
+        int rightIndex = array.length - 1;
+
         while (leftIndex <= rightIndex) {
             int currentLeftSideElement = array[leftIndex];
             if (currentLeftSideElement <= min) {
@@ -34,6 +33,7 @@ public class Task {
             leftIndex++;
             rightIndex--;
         }
+
         return min + previousMin;
     }
 }
