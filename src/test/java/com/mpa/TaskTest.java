@@ -2,6 +2,7 @@ package com.mpa;
 
 import com.mpa.utils.TestUtils;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -15,13 +16,17 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 class TaskTest {
 
-    private static Task task;
     private static TestUtils testUtils;
+    private Task task;
 
     @BeforeAll
     static void beforeAll() {
-        task = new Task();
         testUtils = new TestUtils();
+    }
+
+    @BeforeEach
+    void beforeEach() {
+        task = new Task();
     }
 
     @Test
