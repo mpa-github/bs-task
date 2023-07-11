@@ -20,7 +20,6 @@ public class Task {
             } else if (currentLeftSideElement < previousMin) {
                 previousMin = currentLeftSideElement;
             }
-
             if (rightIndex != leftIndex) {
                 int currentRightSideElement = array[rightIndex];
                 if (currentRightSideElement <= min) {
